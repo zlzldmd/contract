@@ -7,8 +7,11 @@ CONTRACT helloworld: public contract{
         using contract::contract;
 
         ACTION hi(name user) {
-            /* require_auth(user);*/
-            check(has_auth(user), "sungmin hi");
+           check(has_auth(get_self()) || has_auth("asmasmasmasm"_n),"FUCK YOU");
+           /* name abc = name("sks123123123");
+            get_self()
+            check(has_auth(user), "DEFAULT");
+            require_auth(get_self());  check( has_auth( get_self()), "you ain't a contract deployer!!"*)*/
             print("HELLO.", user);
         }
 
