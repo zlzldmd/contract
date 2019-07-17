@@ -8,7 +8,7 @@ CONTRACT helloworld: public contract{
 
         ACTION hi(name user) {
             /* require_auth(user);*/
-            check(has_auth(user), "mssing authority");
+            check(has_auth(user), "sungmin hi");
             print("HELLO.", user);
         }
 
