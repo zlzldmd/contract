@@ -14,6 +14,9 @@ CONTRACT helloworld: public contract{
             require_auth(get_self());  check( has_auth( get_self()), "you ain't a contract deployer!!"*)*/
             print("HELLO.", user);
         }
-
+                ACTION getaccount(name user){
+                    require_auth(get_self());
+                    print(is_account(user));
+                }
     private:
 }; 
